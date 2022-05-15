@@ -25,7 +25,7 @@ db.connectAsync()
     // Expand this table definition as needed:
     db.queryAsync(
       `CREATE TABLE IF NOT EXISTS responses (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-      firstName VARCHAR(32) NOT NULL,address1 VARCHAR(64) NOT NULL, address2 VARCHAR(64),
+      firstName VARCHAR(32) NOT NULL, address1 VARCHAR(64) NOT NULL, address2 VARCHAR(64),
       city VARCHAR(32) NOT NULL, state VARCHAR(32) NOT NULL, zip VARCHAR(10) NOT NULL)`
     )
   )

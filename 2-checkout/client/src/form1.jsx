@@ -1,26 +1,22 @@
 import React from 'react';
 
-class Form1 extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
+var Form1 = (props) => (
+    <div>
+      <h3>Step 1</h3>
       <div>
-        <h2>Customer Checkout</h2>
-        <div>
-          <input type="text" name="firstName" placeholder="First Name"></input>
-          <input type="text" name="lastName" placeholder="Last Name"></input>
-          <input type="text" name="email" placeholder="email address"></input>
-          <input type="text" name="password" placeholder="password (max 32 characters)"></input>
-        </div>
-        <div></div>
-        <div></div>
-        <button>Next</button>
+        <label htmlFor="firstName">First name</label><br></br>
+        <input type="text" name="firstName" placeholder="First Name" onChange={props.handleChangeForm}></input><br></br>
+        <label htmlFor="lastName">Last name</label><br></br>
+        <input type="text" name="lastName" placeholder="Last Name" onChange={props.handleChangeForm}></input><br></br>
+        <label htmlFor="email">Email address</label><br></br>
+        <input type="email" name="email" placeholder="email address" onChange={props.handleChangeForm}></input><br></br>
+        <label htmlFor="password">Password</label><br></br>
+        <input type="password" name="password" placeholder="password" onChange={props.handleChangeForm}></input>
       </div>
-    );
-  }
-}
+      {/* <div>
+        <button onClick={props.handleSubmitForm1}>Next</button>
+      </div> */}
+    </div>
+);
 
 export default Form1;
